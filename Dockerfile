@@ -9,8 +9,10 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # ------------------------------------------------------------------------------
 # Install vsftpd and clean up
-RUN apt-get update && apt-get install -y --no-install-recommends didiwiki && \
-apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends didiwiki && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 # ------------------------------------------------------------------------------
 # Install startup script
